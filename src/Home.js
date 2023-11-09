@@ -75,7 +75,6 @@ const Home = () => {
                             <hr/>
                             <small className="blog-publication-date">Publier le: {blog.date}</small>
                             <p className="blog-author">Par: {blog.auteur} </p>
-                            <p className="blog-author">Par: {blog.auteur} </p>
                         </div>
                      ) )
             }    
