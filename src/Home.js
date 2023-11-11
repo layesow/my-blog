@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BlogList from "./BlogList";
 const Home = () => {
     /* const test = () => {
@@ -34,7 +34,7 @@ const Home = () => {
             date: "07/11/2023"
         },
         {
-            id:2 , 
+            id:3 , 
             titre:'Titre3',
             description:"C'est un bonhomme de neige",
             imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr470W02B_jSrS-2IcrYols8XKddbRLQpgV7SwCn3tEMFCsbyKrkPHlUp_5DHExdAqXqU&usqp=CAU",
@@ -42,7 +42,7 @@ const Home = () => {
             date: "07/11/2023"
         },
         {
-            id:2 , 
+            id:4 , 
             titre:'Titre4',
             description:"C'est un bonhomme de neige",
             imageUrl:"https://res.cloudinary.com/practicaldev/image/fetch/s--rckqv8Sy--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/91yhnh0era2zx9ial7me.png",
@@ -50,6 +50,20 @@ const Home = () => {
             date: "07/11/2023"
         }
     ]);
+
+    // pour sa suppression des articles
+    const HandleDelete = (id)=>{
+        const newBlogs= blogs.filter( (blog) => blog.id !== id);
+        setBlog(newBlogs);
+    }
+    
+    // faire une action de use effect et usestate
+    const [name, setName] = useState('Jeune');
+
+    useEffect( ()=>{
+        console.log('Use effet en action');
+        console.log(blogs);
+    },[blogs, name] );
 
     return ( 
         <div className="home">
@@ -66,8 +80,12 @@ const Home = () => {
                 <p>Salut {name}</p>
                 <button onClick={test3} >cliquez ici pour voir l'evenement</button> */
             }
-            <BlogList blogs={blogs} title />
-            <BlogList blogs={blogs.filter( (blog)=> blog.auteur === 'Papa')} title />
+            <BlogList blogs={blogs} title  HandleDelete={HandleDelete} />
+            <button onClick={ ()=> setName('Dev') }>Clicquer ici</button>
+            <p>{name}</p>
+
+            {/*  blogs.filter est utiliser pour filter les donnees */}
+            {/* <BlogList blogs={blogs.filter( (blog)=> blog.auteur === 'Papa')} title /> */}
         </div>
      );
 }
