@@ -16,54 +16,27 @@ const Home = () => {
     */
 
     // eslint-disable-next-line no-unused-vars
-    const [blogs, setBlog]= useState([
-        {
-            id:1 , 
-            titre:'Titre1',
-            description:"C'est un bonhomme de neige",
-            imageUrl:"https://img-c.udemycdn.com/course/480x270/4675300_2632.jpg",
-            auteur: "Paby",
-            date: "07/11/2023"
-        },
-        {
-            id:2 , 
-            titre:'Titre2',
-            description:"C'est un bonhomme de neige",
-            imageUrl:"https://paidcoursesforfree.com/wp-content/uploads/2021/01/Complete-React-Developer-In-2020-W-Redux-Hooks-GraphQL.jpg",
-            auteur: "Papa",
-            date: "07/11/2023"
-        },
-        {
-            id:3 , 
-            titre:'Titre3',
-            description:"C'est un bonhomme de neige",
-            imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr470W02B_jSrS-2IcrYols8XKddbRLQpgV7SwCn3tEMFCsbyKrkPHlUp_5DHExdAqXqU&usqp=CAU",
-            auteur: "Papa",
-            date: "07/11/2023"
-        },
-        {
-            id:4 , 
-            titre:'Titre4',
-            description:"C'est un bonhomme de neige",
-            imageUrl:"https://res.cloudinary.com/practicaldev/image/fetch/s--rckqv8Sy--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/91yhnh0era2zx9ial7me.png",
-            auteur: "Papa",
-            date: "07/11/2023"
-        }
-    ]);
+    const [blogs, setBlog]= useState( null );
 
     // pour sa suppression des articles
-    const HandleDelete = (id)=>{
+    /* const HandleDelete = (id)=>{
         const newBlogs= blogs.filter( (blog) => blog.id !== id);
         setBlog(newBlogs);
-    }
+    } */
     
     // faire une action de use effect et usestate
-    const [name, setName] = useState('Jeune');
+    //const [name, setName] = useState('Jeune');
 
     useEffect( ()=>{
-        console.log('Use effet en action');
-        console.log(blogs);
-    },[blogs, name] );
+        //fetch pour la recuperation de donnee via une api
+        fetch('http://localhost:8000/blogs')
+            .then((response)=> {
+                return response.json();
+            })
+            .then((data)=>{
+                setBlog(data);
+            })
+    },[] );
 
     return ( 
         <div className="home">
@@ -80,9 +53,7 @@ const Home = () => {
                 <p>Salut {name}</p>
                 <button onClick={test3} >cliquez ici pour voir l'evenement</button> */
             }
-            <BlogList blogs={blogs} title  HandleDelete={HandleDelete} />
-            <button onClick={ ()=> setName('Dev') }>Clicquer ici</button>
-            <p>{name}</p>
+            {blogs && <BlogList blogs={blogs} title />}
 
             {/*  blogs.filter est utiliser pour filter les donnees */}
             {/* <BlogList blogs={blogs.filter( (blog)=> blog.auteur === 'Papa')} title /> */}
