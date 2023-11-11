@@ -1,4 +1,4 @@
-const BlogList = ({blogs,title, HandleDelete}) => {
+const BlogList = ({blogs,title}) => {
 
     
     return ( 
@@ -9,15 +9,15 @@ const BlogList = ({blogs,title, HandleDelete}) => {
                 {
                         blogs.map( (blog) =>(
                             <div className="blog" key={blog.id}>
-                                <img className="image" src={blog.imageUrl} alt="" />
-                                <a href="/" className="blog-titre">{blog.titre} </a>
-                                <p className="">Publier par: {blog.description} </p>
+                                <img className="image" src={blog.image} alt="" />
+                                <a href="/" className="blog-titre">{blog.title} </a>
+                                <p className="">{blog.body.slice(0, 70)}... </p>
                                 <hr/>
                                 <small className="blog-publication-date">Publier le: {blog.date}</small>
-                                <p className="blog-author">Par: {blog.auteur} </p>
+                                <p className="blog-author">Par: {blog.author} </p>
 
                                 {/* suppression des articles */}
-                                <button onClick={ () =>HandleDelete(blog.id)}>supprimer un article</button>
+                                {/* <button onClick={ () =>HandleDelete(blog.id)}>supprimer un article</button> */}
                             </div>
                         ) )
                 }    
