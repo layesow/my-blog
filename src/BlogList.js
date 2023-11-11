@@ -1,10 +1,8 @@
 const BlogList = ({blogs,title}) => {
 
-    
     return ( 
         <div>
             <h2>{title='Liste des articles'}</h2>
-
             <div className="bloglist">
                 {
                         blogs.map( (blog) =>(
@@ -15,9 +13,6 @@ const BlogList = ({blogs,title}) => {
                                 <hr/>
                                 <small className="blog-publication-date">Publier le: {blog.date}</small>
                                 <p className="blog-author">Par: {blog.author} </p>
-
-                                {/* suppression des articles */}
-                                {/* <button onClick={ () =>HandleDelete(blog.id)}>supprimer un article</button> */}
                             </div>
                         ) )
                 }    

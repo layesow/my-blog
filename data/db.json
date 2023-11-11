@@ -5,7 +5,7 @@
         "image": "https://cdn.sayonetech.com/media/zinnia/Is_React_Js_JS_Frontend_Or_Backend.jpg",
         "title": "aliquet nec, imperdiet nec, leo.",
         "body": "cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna",
-        "author": "Grant",
+        "author": "Laye",
         "date": "02/01/2021"
     },
     {
@@ -13,40 +13,40 @@
         "image": "https://edteam-media.s3.amazonaws.com/specialities/original/c2e8d8de-0c2c-420a-96f5-76c5090bd9a5.png",
         "title": "bibendum ullamcorper. Duis cursus, diam",
         "body": "cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna.",
-        "author": "Oren",
+        "author": "Laye",
         "date": "02/01/2021"
     },
     {
         "id": 423,
         "image": "https://miro.medium.com/v2/resize:fit:1400/1*DfbQPLqAQmONBm2Rv9JnMg.jpeg",
         "title": "Salut les pros",
-        "author": "Tony",
+        "author": "Paby",
         "body": "cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna",
-        "date": "2021-03-11 18:38:05.977Z"
+        "date": "2021-03-11"
     },
     {
         "id": 424,
         "image": "https://images.prismic.io//intuzwebsite/1b9e95a4-39e0-40e5-9b79-9581cb448d40_React+Guide.jpg?w=1200&q=75&auto=format,compress&fm=png8",
         "title": "Deuxieme article",
-        "author": "Duplex",
+        "author": "Sow",
         "body": "cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna",
-        "date": "2021-03-11 18:42:59.047Z"
+        "date": "2021-03-11"
     },
     {
         "id": 425,
         "image": "https://www.heliossolutions.co/blog/wp-content/uploads/2019/12/blog-FeaturedImage-ReactJSDevelopment-17-12-2019-1-1280x720.jpg",
         "title": "Dernier test",
-        "author": "Duplex",
+        "author": "Sow",
         "body": "cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna",
-        "date": "2021-03-11 18:43:37.501Z"
+        "date": "2021-03-11"
     },
     {
         "id": 426,
         "image": "https://images.prismic.io//intuzwebsite/1b9e95a4-39e0-40e5-9b79-9581cb448d40_React+Guide.jpg?w=1200&q=75&auto=format,compress&fm=png8",
         "title": "This is a great tutorial",
-        "author": "Tony",
+        "author": "Laye",
         "body": "cursus vestibulum. Mauris magna. Duis dignissim tempor arcu. Vestibulum ut eros non enim commodo hendrerit. Donec porttitor tellus non magna",
-        "date": "2021-03-11 18:45:05.871Z"
+        "date": "2021-03-11"
       }
     ]
     
