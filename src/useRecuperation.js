@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useRecuperation = (url) => {
-    // eslint-disable-next-line no-unused-vars
+    // usestate de la data
     const [data, setData]= useState( null );
     //loading
     const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +33,7 @@ const useRecuperation = (url) => {
             });
         
     },[url] );
-    
+
     return { data, isLoading, error };
 }
  

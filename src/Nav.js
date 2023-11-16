@@ -1,12 +1,15 @@
+// importataion de link pour la navigation
+import { Link } from "react-router-dom";
+
 const Nav = () => {
     return ( 
         <nav className="navbar">
             <div>
-                <a href="/" className="logo">Jeune Dev</a>
+                <Link to="/" className="logo">Jeune Dev</Link>
             </div>
             <ul className="liens">
-                <li><a href="/" className="lien">Accueil</a></li>
-                <li><a href="/creer-article" className="lien buttonArticle">Créer un article</a></li>
+                <li><Link to="/" className="lien">Accueil</Link></li>
+                <li><Link to="/ajouter" className="lien buttonArticle">Créer un article</Link></li>
             </ul>
         </nav>
 

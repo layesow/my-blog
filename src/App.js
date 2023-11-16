@@ -1,16 +1,34 @@
+import Ajouter from './Ajouter';
 import './App.css';
+import BlogDetail from './BlogDetail';
 import Home from './Home';
 import Nav from './Nav';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
   
   return (
-    <div className="App">
+    <Router>
+      <div className="App">
         <Nav />
-      <div className="contenu">
-        <Home />
+        <div className="contenu">
+          <Switch>
+            <Route exact path={'/'}>
+              <Home />
+            </Route>
+
+            <Route path={'/ajouter'}>
+              <Ajouter />
+            </Route>
+            <Route path={'/blogs/:id'}>
+              <BlogDetail />
+            </Route>
+
+
+          </Switch>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 

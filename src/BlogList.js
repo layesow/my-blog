@@ -1,3 +1,6 @@
+// Import Link
+import { Link } from "react-router-dom";
+
 const BlogList = ({blogs,title}) => {
 
     return ( 
@@ -8,7 +11,7 @@ const BlogList = ({blogs,title}) => {
                         blogs.map( (blog) =>(
                             <div className="blog" key={blog.id}>
                                 <img className="image" src={blog.image} alt="" />
-                                <a href="/" className="blog-titre">{blog.title} </a>
+                                <Link to={`/blogs/${blog.id}`} className="blog-titre">{blog.title} </Link>
                                 <p className="">{blog.body.slice(0, 70)}... </p>
                                 <hr/>
                                 <small className="blog-publication-date">Publier le: {blog.date}</small>
