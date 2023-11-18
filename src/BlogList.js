@@ -10,7 +10,7 @@ const BlogList = ({blogs,title}) => {
                 {
                         blogs.map( (blog) =>(
                             <div className="blog" key={blog.id}>
-                                <img className="image" src={blog.image} alt="" />
+                                <Link to={`/blogs/${blog.id}`}><img className="image" src={blog.image} alt="" /></Link>
                                 <Link to={`/blogs/${blog.id}`} className="blog-titre">{blog.title} </Link>
                                 <p className="">{blog.body.slice(0, 70)}... </p>
                                 <hr/>

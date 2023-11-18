@@ -163,6 +163,25 @@ label{
   width: 150px;
   font-size: 1.2rem;
 }
+.btn-create {
+  background-color: #028bfc; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  padding: 10px 20px; /* Espacement intérieur du bouton */
+  border: none; /* Supprimer la bordure */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur au survol */
+  font-size: 16px; /* Taille de la police */
+  width: 150px;
+  transition: background-color 0.3s; /* Transition de la couleur de fond */
+
+  /* Ajouter d'autres styles si nécessaire */
+
+  /* Style au survol */
+  &:hover {
+    background-color: #0477d5; /* Nouvelle couleur de fond au survol */
+  }
+}
+
 
 .btn-danger{
   background: #fc1f02;
@@ -170,12 +189,11 @@ label{
 }
 
 .not-found{
-  text-align: left;
-  margin-top: 3rem;
+  text-align: center;
+  margin-top: 5rem;
 }
 
 .not-found a{
-  text-decoration: none;
   color: #028bfc;
   font-weight: normal;
   font-size: 1.2rem;
@@ -185,4 +203,29 @@ label{
   padding: 0.3rem;
   border-radius: 0.3rem;
   color: #fff;
+}
+
+.blog-detail {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  text-align: start;
+}
+
+.blog-detail-image {
+  max-width: 40%;
+}
+
+.blog-detail-content {
+  flex-grow: 1;
+  text-align: start;
+  padding: 10px;
+}
+
+.blog-detail-title {
+  color: #028bfc;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: start;
 }
