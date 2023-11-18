@@ -5,6 +5,9 @@ const BlogList = ({blogs,title}) => {
 
     return ( 
         <div>
+            <div className="">
+                slide
+            </div>
             <h2>{title='Liste des articles'}</h2>
             <div className="bloglist">
                 {
